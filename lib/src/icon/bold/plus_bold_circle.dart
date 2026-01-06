@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+
+class PlusBoldCircleIcon extends StatelessWidget {
+  final double size;
+  final Color? color;
+
+  const PlusBoldCircleIcon({
+    super.key,
+    this.size = 24,
+    this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    // SVG Plus Circle Bold ที่พี่ส่งมา
+    const String svgData = '''<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m1 15a1 1 0 1 1-2 0v-3H8a1 1 0 1 1 0-2h3V8a1 1 0 1 1 2 0v3h3a1 1 0 1 1 0 2h-3z" clip-rule="evenodd"/></svg>''';
+
+    return Iconify(
+      svgData,
+      size: size,
+      color: color,
+    );
+  }
+}

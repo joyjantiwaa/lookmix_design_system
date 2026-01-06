@@ -1,0 +1,38 @@
+name: lookmix_design_system_example
+description: "Example and Storybook for Lookmix Design System"
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.0.0 <4.0.0" # ปรับให้ตรงกับโปรเจกต์หลัก
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # ✅ 1. ตัวหลักที่ดึงมาจากโฟลเดอร์ด้านบน
+  lookmix_design_system:
+    path: ../
+
+  # ✅ 2. ต้องใส่ Dependencies ที่จำเป็นสำหรับการแสดงผลใน Storybook ด้วย
+  # เพื่อให้เวลา Runtime บน Chrome มันหา Library เหล่านี้เจอ
+  iconify_flutter: ^0.0.4
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.2.3
+  flutter_portal: ^1.1.4
+  intl: ^0.20.2
+  shimmer: ^3.0.0
+  lucide_icons: 0.257.0
+  remixicon: 1.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # ✅ 3. ถ้าพี่มีการใช้ Logo ในหน้า Storybook (เช่น ใน Header/Footer)
+  # ต้องประกาศ Assets ในนี้ด้วยเพื่อให้มันดึงไฟล์จาก path ที่ถูกต้อง
+  assets:
+    - ../assets/logos/Lookmixlogo.svg

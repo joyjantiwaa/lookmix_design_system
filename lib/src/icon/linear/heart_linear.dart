@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+
+class HeartIcon extends StatelessWidget {
+  final double size;
+  final Color? color;
+
+  const HeartIcon({
+    super.key, 
+    this.size = 24, 
+    this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    // รหัส SVG Heart (รูปหัวใจเส้นขอบพรีเมียม)
+    const String heartSvg = '''
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 7.23c-1.733-3.924-5.764-4.273-7.641-2.562c-1.529 1.373-2.263 4.665-.867 7.695C5.9 17.573 12 20.309 12 20.309s6.101-2.736 8.508-7.946c1.396-3.03.662-6.322-.867-7.695C17.764 2.957 13.733 3.306 12 7.229"/>
+    </svg>
+    ''';
+
+    return Iconify(
+      heartSvg,
+      size: size,
+      color: color,
+    );
+  }
+}
