@@ -12,7 +12,7 @@ class LookmixCheckbox extends StatefulWidget {
   final ValueChanged<bool?>? onChanged;
 
   // ✅ ลบคำว่า const ออกจากบรรทัดนี้ เพราะเราใช้ dynamic tokens ข้างใน
-  LookmixCheckbox({
+  const LookmixCheckbox({
     super.key,
     this.label,
     this.value = false,

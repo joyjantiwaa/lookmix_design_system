@@ -14,7 +14,7 @@ class DividerWidget extends StatelessWidget {
   final EdgeInsets? margin;
 
   const DividerWidget({
-    Key? key,
+    super.key, // ✅ แก้เป็น super.key (ลดความเยิ่นเย้อ)
     this.orientation = DividerOrientation.horizontal,
     this.type = DividerType.solid,
     this.child,
@@ -22,11 +22,12 @@ class DividerWidget extends StatelessWidget {
     this.color,
     this.thickness = 1.0,
     this.margin,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    final dividerColor = color ?? Colors.grey[300];
+    // ✅ ใช้ ?? Colors.grey เพื่อเลี่ยงค่า null
+    final dividerColor = color ?? Colors.grey[300]!;
 
     if (orientation == DividerOrientation.vertical) {
       return Container(
@@ -36,7 +37,7 @@ class DividerWidget extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border(
             left: BorderSide(
-              color: dividerColor!,
+              color: dividerColor,
               width: thickness,
               style: _mapType(),
             ),
@@ -53,7 +54,7 @@ class DividerWidget extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border(
               top: BorderSide(
-                color: dividerColor!,
+                color: dividerColor,
                 width: thickness,
                 style: _mapType(),
               ),
@@ -63,23 +64,25 @@ class DividerWidget extends StatelessWidget {
       );
 
       List<Widget> childrenList;
+      // ✅ ลบ default: ออก และใส่ case ให้ครบตามที่ Analyze แจ้งเตือน
       switch (textAlign) {
         case DividerTextAlign.left:
-          childrenList = [child!, SizedBox(width: 8), line];
+          childrenList = [child!, const SizedBox(width: 8), line];
           break;
         case DividerTextAlign.right:
-          childrenList = [line, SizedBox(width: 8), child!];
+          childrenList = [line, const SizedBox(width: 8), child!];
           break;
-        default:
-          childrenList = [line, SizedBox(width: 8), child!, SizedBox(width: 8), line];
+        case DividerTextAlign.center:
+          childrenList = [line, const SizedBox(width: 8), child!, const SizedBox(width: 8), line];
+          break;
       }
 
       return Container(
         margin: margin ?? const EdgeInsets.symmetric(vertical: 16),
         child: Row(
-          children: childrenList,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
+          children: childrenList, // ✅ ย้ายมาไว้หลังสุดตามกฎ sort_child_properties_last
         ),
       );
     }
@@ -93,7 +96,7 @@ class DividerWidget extends StatelessWidget {
           : CustomPaint(
               size: Size(double.infinity, thickness),
               painter: _DashedDividerPainter(
-                color: dividerColor!,
+                color: dividerColor,
                 thickness: thickness,
                 type: type,
                 axis: Axis.horizontal,
@@ -103,12 +106,12 @@ class DividerWidget extends StatelessWidget {
   }
 
   BorderStyle _mapType() {
+    // ✅ ลบ default: ออก เพราะ Enum มีแค่ 3 ค่า และเราดักไว้ครบแล้ว
     switch (type) {
       case DividerType.dashed:
       case DividerType.dotted:
-        return BorderStyle.none; // ใช้ CustomPainter
+        return BorderStyle.none; // ใช้ CustomPainter แทน
       case DividerType.solid:
-      default:
         return BorderStyle.solid;
     }
   }

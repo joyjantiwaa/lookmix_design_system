@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../theme/jpjoy_theme.dart';
-import '../theme/theme_provider.dart';
+import 'package:lookmix_design_system/src/theme/jpjoy_theme.dart';
+import 'package:lookmix_design_system/src/theme/jpjoy_theme_provider.dart';
 
 class ThemeController {
   final BuildContext context;
@@ -9,24 +9,27 @@ class ThemeController {
 
   JpjoyTheme get theme => JpjoyThemeProvider.of(context);
 
-  bool get isDark => theme == JpjoyTheme.dark(); // หรือใช้ตัวแปร flag ใน provider
+  bool get isDark => theme == JpjoyTheme.dark(); 
   bool get isLight => !isDark;
 
   void toggleTheme() {
-    // สมมติว่าคุณใช้ ThemeProviderState เพื่อ toggle
-    final state = context.findAncestorStateOfType<_JpjoyThemeProviderState>();
+    // ✅ เชื่อมต่อกับคลาส Public ที่พี่แก้มาแล้ว
+    final state = context.findAncestorStateOfType<JpjoyThemeProviderState>();
     state?.toggleTheme();
   }
 
   void setThemeMode(bool darkMode) {
-    final state = context.findAncestorStateOfType<_JpjoyThemeProviderState>();
+    // ✅ เชื่อมต่อกับคลาส Public และเรียกใช้เมธอดข้างใน
+    final state = context.findAncestorStateOfType<JpjoyThemeProviderState>();
     if (state != null) {
-      state._theme = darkMode ? JpjoyTheme.dark() : JpjoyTheme.light();
+      // ใช้ setState ผ่านเมธอดที่มีอยู่ หรือแก้ค่าข้างใน
+      if (darkMode != state.isDark) {
+        state.toggleTheme();
+      }
     }
   }
 }
 
-/// Extension เพื่อเรียกง่าย ๆ
 extension UseTheme on BuildContext {
   ThemeController get useTheme => ThemeController(this);
 }

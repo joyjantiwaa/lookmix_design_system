@@ -71,7 +71,6 @@ export 'eyeglasses_bold.dart';
 export 'necklace_bold.dart';
 export 'earphones_bold.dart';
 export 'wardrobe_bold.dart';
-export 'up_bold.dart';
 export 'down_bold.dart';
 export 'down_bold_circle.dart';
 export 'up_bold_circle.dart';

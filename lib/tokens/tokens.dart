@@ -113,7 +113,7 @@ class JpjoyTokens {
   final Gradient gradientGlass = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Colors.white.withOpacity(0.4), Colors.white.withOpacity(0.1)],
+    colors: [Colors.white.withValues(alpha:0.4), Colors.white.withValues(alpha:0.1)],
   );
 
   final double blurDefault = 8.0;

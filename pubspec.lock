@@ -65,14 +65,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.7"
-  device_frame:
-    dependency: transitive
-    description:
-      name: device_frame
-      sha256: "7b2ebb2a09d6cc0f086b51bd1412d7be83e0170056a7290349169be41164c86a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.4.0"
   fake_async:
     dependency: transitive
     description:
@@ -94,6 +86,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_lints:
+    dependency: "direct dev"
+    description:
+      name: flutter_lints
+      sha256: "3f41d009ba7172d5ff9be5f6e6e6abb4300e263aab8866d2a0842ed2a70f8f0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   flutter_portal:
     dependency: "direct main"
     description:
@@ -120,14 +120,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  freezed_annotation:
-    dependency: transitive
-    description:
-      name: freezed_annotation
-      sha256: "7294967ff0a6d98638e7acb774aac3af2550777accd8149c90af5b014e6d44d8"
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.1.0"
   google_fonts:
     dependency: "direct main"
     description:
@@ -168,14 +160,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.20.2"
-  json_annotation:
-    dependency: transitive
-    description:
-      name: json_annotation
-      sha256: "1ce844379ca14835a50d2f019a3099f419082cfdd231cd86a142af94dd5c6bb1"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.9.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -200,6 +184,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
+  lints:
+    dependency: transitive
+    description:
+      name: lints
+      sha256: "976c774dd944a42e83e2467f4cc670daef7eed6295b10b36ae8c85bcbf828235"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   lucide_icons:
     dependency: "direct main"
     description:
@@ -232,14 +224,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.0"
-  nested:
-    dependency: transitive
-    description:
-      name: nested
-      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -328,30 +312,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
-  pointer_interceptor:
-    dependency: transitive
-    description:
-      name: pointer_interceptor
-      sha256: adf7a637f97c077041d36801b43be08559fd4322d2127b3f20bb7be1b9eebc22
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.9.3+7"
-  provider:
-    dependency: transitive
-    description:
-      name: provider
-      sha256: "4e82183fa20e5ca25703ead7e05de9e4cceed1fbd1eadc1ac3cb6f565a09f272"
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.1.5+1"
-  recase:
-    dependency: transitive
-    description:
-      name: recase
-      sha256: e4eb4ec2dcdee52dcf99cb4ceabaffc631d7424ee55e56f280bc039737f89213
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.1.0"
   remixicon:
     dependency: "direct main"
     description:
@@ -389,14 +349,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.12.1"
-  storybook_flutter:
-    dependency: "direct dev"
-    description:
-      name: storybook_flutter
-      sha256: "68f07d2caf16bd34e9cfbc479d60298a6568abfac552ea1998ef724344c6cc13"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.14.1"
   stream_channel:
     dependency: transitive
     description:

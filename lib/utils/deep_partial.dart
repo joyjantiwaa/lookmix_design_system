@@ -1,6 +1,7 @@
 /// DeepPartial
 /// ทำให้ทุก property ของ T เป็น optional แบบ recursive
 /// ใช้สำหรับ data class หรือ Map<String, dynamic> แบบ nested
+library;
 
 /// Generic helper สำหรับ Map ที่สามารถเป็น partial
 typedef DeepPartialMap = Map<String, dynamic>;

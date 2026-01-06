@@ -1,8 +1,9 @@
 name: lookmix_design_system
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: "A comprehensive design system for Lookmix projects including UI components and icons."
+version: 0.0.1
+
+homepage: https://github.com/joyjantiwaa/lookmix_design_system
+repository: https://github.com/joyjantiwaa/lookmix_design_system
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -11,26 +12,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  iconify_flutter: ^0.0.4  # สำคัญมากสำหรับไฟล์ไอคอนที่พี่แปลงมา
-  google_fonts: ^6.1.0    # สำหรับระบบ Typography
+  iconify_flutter: ^0.0.4
+  google_fonts: ^6.1.0
   flutter_svg: ^2.2.3
-  flutter_portal: ^1.1.4  # ✅ ใช้ตัวนี้แทนครับ
-  intl: ^0.20.2           # สำหรับ Format วันที่
+  flutter_portal: ^1.1.4
+  intl: ^0.20.2
   collection: ^1.18.0
   shimmer: ^3.0.0
   url_launcher: ^6.3.2
-  lucide_icons: 0.257.0
-  remixicon: 1.4.1
+  lucide_icons: ^0.257.0
+  remixicon: ^1.4.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  # ตัวเลือกเสริมสำหรับทำ Storybook (แนะนำตัวนี้ครับ)
-  storybook_flutter: ^0.14.0
+  flutter_lints: ^4.0.0
+  # ✅ ลบ storybook ออกถ้าพี่ลบโฟลเดอร์ example ไปแล้ว
 
 flutter:
   uses-material-design: true
-
-  # เพิ่มส่วนนี้เข้าไปครับ
   assets:
     - assets/logos/Lookmixlogo.svg

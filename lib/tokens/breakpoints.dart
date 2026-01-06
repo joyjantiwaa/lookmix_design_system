@@ -1,5 +1,13 @@
 import 'package:flutter/widgets.dart';
 
+// ✅ เพิ่มคลาสนี้เข้าไปเพื่อเก็บค่าตัวเลข
+class Breakpoints {
+  static const double mobile = 480;
+  static const double tablet = 768;
+  static const double laptop = 1024;
+  static const double desktop = 1440;
+}
+
 class Responsive {
   static double width(BuildContext context) =>
       MediaQuery.of(context).size.width;

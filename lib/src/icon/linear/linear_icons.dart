@@ -1,6 +1,7 @@
 /// --------------------------------------------------
 /// Linear Icons Collection
 /// --------------------------------------------------
+library;
 
 // System & Navigation
 export 'home_linear.dart';

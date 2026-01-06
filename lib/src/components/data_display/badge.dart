@@ -73,7 +73,7 @@ class LookmixBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     final tokens = JpjoyTokens.light();
     final double badgeHeight = _getHeight();
-    final double dotSize = 10.0;
+    const double dotSize = 10.0;
 
     final badgeWidget = Container(
       padding: isDot ? EdgeInsets.zero : const EdgeInsets.symmetric(horizontal: 6),

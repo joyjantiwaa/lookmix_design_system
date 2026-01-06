@@ -46,7 +46,7 @@ class MyHeader extends StatelessWidget implements PreferredSizeWidget {
         border: Border(bottom: BorderSide(color: Colors.grey.shade200)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha:0.05),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -92,8 +92,8 @@ class MyHeader extends StatelessWidget implements PreferredSizeWidget {
           height: preferredSize.height,
           padding: const EdgeInsets.symmetric(horizontal: 16),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.7), // effects-gradients-glass
-            border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.2))),
+            color: Colors.white.withValues(alpha:0.7), // effects-gradients-glass
+            border: Border(bottom: BorderSide(color: Colors.white.withValues(alpha:0.2))),
           ),
           child: SafeArea(
             bottom: false,

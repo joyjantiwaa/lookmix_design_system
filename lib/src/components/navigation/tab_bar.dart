@@ -150,7 +150,7 @@ class _TabItemState extends State<_TabItem> {
                       color: widget.activeColor,
                     ),
                     transform: Matrix4.identity()
-                      ..scale(widget.isSelected ? 1.0 : 0.0, 1.0),
+                      ..scaleByDouble(widget.isSelected ? 1.0 : 0.0, 1.0, 1.0, 1.0),
                     transformAlignment: Alignment.center,
                   ),
                 ),
